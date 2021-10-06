@@ -9,11 +9,19 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Restart();
+    }
+
+    public static void Restart()
+    {
         TotalScore = 0;
     }
 
     public static void AddToTotalScore(int score) {
         TotalScore += score;
-        Debug.Log("Score = " + TotalScore);
+    }
+
+    public static void PlayerHasWon() {
+        Debug.Log("Player has one with score = " + TotalScore);
     }
 }

@@ -8,7 +8,13 @@ public class CreateBricks : MonoBehaviour
     private float start_x = -96;
     private float start_y = 60;
 
-    void Start(){
+    void Start()
+    {
+        AddBlocks();
+    }
+
+    void AddBlocks()
+    {
         float y_pos = start_y;
         
         /*

@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    
+
     public static int TotalScore = 0;
 
     // Start is called before the first frame update
@@ -19,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     public static void AddToTotalScore(int score) {
         TotalScore += score;
+      
     }
 
     public static void PlayerHasWon() {

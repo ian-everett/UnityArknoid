@@ -33,7 +33,7 @@ public class Block : MonoBehaviour
         {
             GameManager.PlayerHasWon();
         }
-
+        FindObjectOfType<Score>().AddScore(100);
         Destroy(gameObject);
     }
 }

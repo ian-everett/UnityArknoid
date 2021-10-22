@@ -6,17 +6,16 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     [SerializeField] Text scoreInfo;
-    int score = 0;
+    private int totalScore;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-    //    scoreInfo.text = "Score : " + score;
+        totalScore = 0;
     }
 
-    public void AddScore(int sc)
+    public void AddScore(int score)
     {
-        score += sc;
-        scoreInfo.text = "Score : " + score;
+        totalScore += score;
+        scoreInfo.text = "Score : " + totalScore;
     }
 }

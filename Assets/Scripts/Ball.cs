@@ -35,12 +35,11 @@ public class Ball : MonoBehaviour
         }
     }
 
-
     float hitFactor(Vector2 ballPos, Vector2 racketPos,float racketWidth) {
-    /*
-     * 1  -0.5  0  0.5   1  <- x value
-     * ===================  <- racket
-     */
-    return (ballPos.x - racketPos.x) / racketWidth;
-}
+        /*
+         * 1  -0.5  0  0.5   1  <- x value
+         * ===================  <- racket
+         */
+        return (ballPos.x - racketPos.x) / racketWidth;
+    }
 }

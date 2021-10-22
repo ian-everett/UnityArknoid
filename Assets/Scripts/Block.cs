@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    public int score = 5;
 
     /*
      * Keep track of blocks
@@ -16,23 +15,8 @@ public class Block : MonoBehaviour
         n_blocks++;
     }
 
-    void OnCollisionEnter2D(Collision2D collisionInfo) {
-
-        /*
-         * Block is destroyed
-         * Add to player score
-         * Note: gameObject is the actual object, we don't
-         * want to destryoy 'this'
-         */
-        GameManager.AddToTotalScore(score);
-
-        /*
-         * When no more blocks player has won
-         */
-        if (--n_blocks == 0)
-        {
-            GameManager.PlayerHasWon();
-        }
+    void OnCollisionEnter2D(Collision2D collisionInfo)
+    {
         FindObjectOfType<Score>().AddScore(100);
         Destroy(gameObject);
     }

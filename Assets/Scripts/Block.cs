@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-
     /*
      * Keep track of blocks
      */
@@ -17,7 +16,6 @@ public class Block : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        FindObjectOfType<Score>().AddScore(100);
         Destroy(gameObject);
     }
 }

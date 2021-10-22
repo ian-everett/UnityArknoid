@@ -1,17 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DeathZone : MonoBehaviour
 {
-    [SerializeField] GameObject go;
+    [SerializeField] UnityEvent loseLife;
 
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name == "Ball")
         {
-            go.GetComponent<LifeIndicator>().RemoveLife();   
+            loseLife.Invoke();
         }
     }
 }

@@ -761,6 +761,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ui: {fileID: 1330553493}
 --- !u!4 &1006900115
 Transform:
   m_ObjectHideFlags: 0
@@ -936,6 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea0eb95a5a638a8abec552690738c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1006900114}
 --- !u!1 &1330553487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,7 +1209,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -315, y: -85}
-  m_SizeDelta: {x: 100, y: 53}
+  m_SizeDelta: {x: 208.584, y: 53}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1993143074
 MonoBehaviour:

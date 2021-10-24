@@ -122,4 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2ad775e97236f85b5e8f625eca7c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreEvent:
+    m_PersistentCalls:
+      m_Calls: []
   score: 40

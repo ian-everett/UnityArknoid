@@ -8,8 +8,10 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    private int lives;
     [SerializeField] IntegerEvent updateLives;
+    [SerializeField] UIManager ui;
+    private int lives;
+    private int totalScore;
 
     public void LoseLife()
     {
@@ -31,11 +33,13 @@ public class GameManager : MonoBehaviour
     {
         lives = 3;
         updateLives.Invoke(lives);
+        totalScore = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void AddToScore(int score)
     {
-        
+        totalScore += score;
+        ui.UpdateScore(totalScore);
     }
 }

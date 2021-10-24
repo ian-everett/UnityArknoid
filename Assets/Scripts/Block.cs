@@ -1,9 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Block : MonoBehaviour
 {
+    [SerializeField] public IntegerEvent scoreEvent;
+    public int score;
+
     /*
      * Keep track of blocks
      */
@@ -16,6 +18,7 @@ public class Block : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
+        scoreEvent.Invoke(score);
         Destroy(gameObject);
     }
 }

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class CreateBricks : MonoBehaviour
 {
+    [SerializeField] GameManager gameManager;
     private int n_cols = 13;
     private float start_x = -96;
     private float start_y = 60;
+    
 
     void Start()
     {
@@ -26,7 +28,9 @@ public class CreateBricks : MonoBehaviour
             float x_pos = start_x;
 
             for (int col = 0; col < n_cols; col++){        
-                Instantiate(block, new Vector2(x_pos, y_pos), Quaternion.identity);
+                GameObject go = Instantiate(block, new Vector2(x_pos, y_pos), Quaternion.identity);
+                go.GetComponent<Block>().scoreEvent.AddListener(gameManager.AddToScore);
+
                 x_pos += size.x;
             }
             y_pos -= size.y;

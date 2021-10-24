@@ -16,8 +16,8 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Level_1");
     }
 
-    void UpdateScore(int total)
+    public void UpdateScore(int total)
     {
-        score.text = "Score :" + total;
+        score.text = "Score: " + total;
     }
 }
